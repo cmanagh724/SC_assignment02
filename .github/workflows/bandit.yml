@@ -15,7 +15,7 @@ jobs:
       contents: read
       packages: read
       statuses: write
-      security-events: read
+      security-events: write
     steps:
       - name: Perform Bandit Analysis
         uses: PyCQA/bandit-action@v1
