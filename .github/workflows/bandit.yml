@@ -7,7 +7,7 @@ name: Bandit
   pull_request:
     branches:
       - main
-permissions: {}
+permissions: {  }
 jobs:
   analyze:
     runs-on: ubuntu-latest
