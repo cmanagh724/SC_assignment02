@@ -1,21 +1,20 @@
 ---
 name: Bandit
-
-on:
-    push:
-        branches: ["main"]
-    pull_request:
-        branches: ["main"]
-
-permissions: {  }
-
+'on':
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+permissions: {}
 jobs:
-    analyze:
-        runs-on: ubuntu-latest
-        permissions:
-            contents: read
-            packages: read
-            statuses: write
-        steps:
-            - name: Perform Bandit Analysis
-              uses: PyCQA/bandit-action@v1
+  analyze:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: read
+      statuses: write
+    steps:
+      - name: Perform Bandit Analysis
+        uses: PyCQA/bandit-action@v1
