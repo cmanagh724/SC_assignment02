@@ -1,13 +1,13 @@
 ---
 name: Bandit
-'on':
+"on":
   push:
     branches:
       - main
   pull_request:
     branches:
       - main
-permissions: {  }
+permissions: {}
 jobs:
   analyze:
     runs-on: ubuntu-latest
