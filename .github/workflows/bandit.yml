@@ -1,0 +1,21 @@
+---
+name: Bandit
+
+on:
+    push:
+        branches: ["main"]
+    pull_request:
+        branches: ["main"]
+
+jobs:
+    analyze:
+        runs-on: ubuntu-latest
+        permissions:
+            # Required for all workflows
+            security-events: write
+            # Only required for workflows in private repositories
+            actions: read
+            contents: read
+        steps:
+            - name: Perform Bandit Analysis
+              uses: PyCQA/bandit-action@v1
